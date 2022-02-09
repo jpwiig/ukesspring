@@ -15,5 +15,10 @@ public class UkesoppgaverSpringBasicController {
     }
 
     //oppgave2
+public String returValuta(String innSum){
+        Valuta kurs= new Valuta();
 
+        double sumutregn=Double.parseDouble(innSum);
+
+    }
 }

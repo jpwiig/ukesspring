@@ -31,11 +31,14 @@
 <section>
     <h2>Oppgave 2</h2>
     <label for="valuater">Velg en valuta</label><br>
-<select id="valuater">
-<option value="EUR">Euro</option>
-    <option value="USD">Dollar</option>
-</select>
-
+    <select id="valuater">
+        <option value="EUR">Euro</option>
+        <option value="USD">Dollar</option>
+        <label for="valuater"></label>
+    </select>
+    <input type="text" id="valuta">
+    <button onclick="oppgave2()">regn om</button>
+    <div id="regnOmvaluta"></div>
 </section>
 </body>
 </html>
