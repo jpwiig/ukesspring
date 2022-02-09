@@ -1,5 +1,5 @@
 function oppgave1(){
-const url="/?innmnd" + $("#måneder").val();
+const url="/?strengInn=" + $("#måneder").val();
 $.get(url, function (maaneden){
     $("#temperatur").html(maaneden);
 })

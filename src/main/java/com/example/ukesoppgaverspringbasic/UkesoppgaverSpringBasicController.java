@@ -5,9 +5,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UkesoppgaverSpringBasicController {
-    public int innmnd=0;
+
     @GetMapping("/")
-    public String returTemp(int innmnd){
+    public String returTemp(String strengInn){
+        int innmnd= Integer.parseInt(strengInn);
         Temp Snitt=new Temp();
         return Snitt.maaneder(innmnd);
     }
