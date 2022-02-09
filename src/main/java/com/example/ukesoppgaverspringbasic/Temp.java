@@ -1,62 +1,60 @@
 package com.example.ukesoppgaverspringbasic;
 
 
-
-import java.util.Arrays;
-
 public class Temp {
     private final Integer[] tempArray = new Integer[]{-3,-2,2,7,12,16,18,17,12,7,3,-2};
-    private String måneden;
-    int månedteller=0;
+    private String maaneden;
+    int maanedteller=0;
 
-    public void måneder (int månedteller, String måneden){
+    public String maaneder (int månedteller){
         switch (månedteller){
         case 0:
-            måneden="Januar";
+            maaneden="Januar";
             break;
         case 1:
-            måneden="Februar";
+            maaneden="Februar";
             break;
         case 2:
-            måneden="Mars";
+            maaneden="Mars";
             break;
         case 3:
-            måneden="April";
+            maaneden="April";
             break;
         case 4:
-            måneden="mai";
+            maaneden="mai";
             break;
         case 5:
-            måneden="juni";
+            maaneden="juni";
             break;
         case 6:
-            måneden="juli";
+            maaneden="juli";
             break;
         case 7:
-            måneden="august";
+            maaneden="august";
             break;
         case 8:
-            måneden="september";
+            maaneden="september";
             break;
         case 9:
-            måneden="oktober";
+            maaneden="oktober";
             break;
         case 10:
-            måneden="november";
+            maaneden="november";
             break;
         case 11:
-            måneden="desember";
+            maaneden="desember";
             break;
     }
-    String ut="snitten var " + tempArray[månedteller] + "grader celcius i " + måneden;
+    String ut="snitten var " + tempArray[månedteller] + "grader celcius i " + maaneden;
+        return ut;
     }
 
     public void setMåneden(String måneden) {
-        this.måneden = måneden;
+        this.maaneden = måneden;
     }
 
     public String getMåneden() {
-        return måneden;
+        return maaneden;
     }
 
 

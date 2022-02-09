@@ -5,12 +5,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class UkesoppgaverSpringBasicController {
-
+    public int innmnd=0;
     @GetMapping("/")
-   public int innmnd=0;
     public String returTemp(int innmnd){
         Temp Snitt=new Temp();
-        return Snitt.måneder(innmnd);
+        return Snitt.maaneder(innmnd);
     }
 
 }
