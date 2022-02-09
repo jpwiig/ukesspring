@@ -21,31 +21,31 @@ public class Temp {
             maaneden="April";
             break;
         case 4:
-            maaneden="mai";
+            maaneden="Mai";
             break;
         case 5:
-            maaneden="juni";
+            maaneden="Juni";
             break;
         case 6:
-            maaneden="juli";
+            maaneden="Juli";
             break;
         case 7:
-            maaneden="august";
+            maaneden="August";
             break;
         case 8:
-            maaneden="september";
+            maaneden="September";
             break;
         case 9:
-            maaneden="oktober";
+            maaneden="Oktober";
             break;
         case 10:
-            maaneden="november";
+            maaneden="November";
             break;
         case 11:
-            maaneden="desember";
+            maaneden="Desember";
             break;
     }
-    String ut="snitten var " + tempArray[månedteller] + "grader celcius i " + maaneden;
+    String ut="snittet var " + tempArray[månedteller] + "grader celcius i " + maaneden;
         return ut;
     }
 
