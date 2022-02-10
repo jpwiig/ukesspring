@@ -3,6 +3,8 @@ package com.example.ukesoppgaverspringbasic;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+
 @RestController
 public class UkesoppgaverSpringBasicController {
 
@@ -17,8 +19,11 @@ public class UkesoppgaverSpringBasicController {
     //oppgave2
 public String returValuta(String innSum){
         Valuta kurs= new Valuta();
-
+    ArrayList<Valuta>Kurser= new ArrayList<>();
         double sumutregn=Double.parseDouble(innSum);
+        double nykurs=sumutregn ;
+
+
 
     }
 }
