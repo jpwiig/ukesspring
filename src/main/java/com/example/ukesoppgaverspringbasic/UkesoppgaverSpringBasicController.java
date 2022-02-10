@@ -20,6 +20,7 @@ public class UkesoppgaverSpringBasicController {
 public String returValuta(String innSum){
         Valuta kurs= new Valuta();
     ArrayList<Valuta>Kurser= new ArrayList<>();
+    Valuta eur=new Valuta()
         double sumutregn=Double.parseDouble(innSum);
         double nykurs=sumutregn ;
 
