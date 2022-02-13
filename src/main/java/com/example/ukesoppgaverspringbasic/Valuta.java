@@ -4,15 +4,10 @@ package com.example.ukesoppgaverspringbasic;
 public class Valuta {
     private String navn;
     private double kurs = 0.00;
-    private String innSum;
-    private double sum=0;
 
-    public Valuta(String navn, double kurs, double sum, String innSum) {
+    public Valuta(String navn, double kurs) {
         navn = this.navn;
-        innSum=this.innSum;
         kurs = this.kurs;
-        sum = this.sum;
-
     }
 
     public Valuta() {
@@ -34,4 +29,8 @@ public class Valuta {
         this.navn = navn;
     }
 
+    @Override
+    public String toString() {
+        return navn +" "+ kurs;
+    };
 }

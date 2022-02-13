@@ -7,13 +7,21 @@ function oppgave1() {
 }
 
 //oppgave 2
-function oppgave2() {
-    const USD = {
-        navn: dollar,
-        kurs: 8.80,
+
+function visArray(){
+    const kurs= {
+        navn: $("#valutaNavn").val(),
+        kurs: $("#kurs").val(),
     };
-    const EUR = {
-        navn: Euro,
-        kurs: 10.06,
+    $.get("/src/main/resources/static/index.html/utVal", function (data){
+        $("#visVal").html(data);
+    })
+}
+
+function oppgave2() {
+    const url="/src/main/resources/static/index2.html/?=" + $("#Uvaluta")
+    const kurs= {
+        navn: $("#valutaNavn").val(),
+        kurs: $("#kurs").val(),
     };
 }
