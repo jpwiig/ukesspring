@@ -1,5 +1,7 @@
 package com.example.ukesoppgaverspringbasic;
 
+import java.util.ArrayList;
+
 //oppgave 2
 public class Valuta {
     private String navn;
@@ -29,8 +31,4 @@ public class Valuta {
         this.navn = navn;
     }
 
-    @Override
-    public String toString() {
-        return navn +" "+ kurs;
-    };
 }

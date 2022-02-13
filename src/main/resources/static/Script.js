@@ -9,17 +9,17 @@ function oppgave1() {
 //oppgave 2
 
 function visArray(){
-    const kurs= {
-        navn: $("#valutaNavn").val(),
+    const valuta= {
+        navn: $("#navn").val(),
         kurs: $("#kurs").val(),
     };
-    $.get("/src/main/resources/static/index.html/utVal", function (data){
+    $.get("/src/main/resources/static/index.html/utVal",valuta,  function (data){
         $("#visVal").html(data);
     })
 }
 
 function oppgave2() {
-    const url="/src/main/resources/static/index2.html/?=" + $("#Uvaluta")
+    const url="/src/main/resources/static/index2.html/" + $("#Uvaluta")
     const kurs= {
         navn: $("#valutaNavn").val(),
         kurs: $("#kurs").val(),

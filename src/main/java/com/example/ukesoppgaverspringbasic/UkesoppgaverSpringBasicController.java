@@ -17,26 +17,19 @@ public class UkesoppgaverSpringBasicController {
     }
 
     //oppgave2
-    @GetMapping("/src/main/resources/static/index.html/utVal")
-    public String VisArray(String utVal) {
-        ArrayList<Valuta> Kurser = new ArrayList<>();
-        Valuta EUR = new Valuta("Euro", 10.30);
-        Valuta USD = new Valuta("Amerikansk Dollar", 8.30);
-        Kurser.add(EUR);
-        Kurser.add(USD);
-
-        for (Valuta penger : Kurser) {
-          utVal= penger.getNavn() + " " + penger.getKurs() +"\n";
-        }
-        return utVal;
+    @GetMapping("/src/main/resources/static/index.html/UT")
+    public String VisArray(Valuta UT) {
+    UT= new Valuta();
+        return UT.utskrift();
     }
 
     @GetMapping("/src/main/resources/static/index2.html")
-    public String returValuta(String innSum) {
+    public String returValuta(String innSum, String innkurs) {
         double sumutregn = Double.parseDouble(innSum);
-        double nykurs = sumutregn;
+        double kurs=Double.parseDouble(innkurs);
+        double sum = sumutregn * kurs;
 
-        return "Det blir " + nykurs + " i Norske kroner ";
+        return "Det blir " + sum + " i Norske kroner ";
     }
 
 }
