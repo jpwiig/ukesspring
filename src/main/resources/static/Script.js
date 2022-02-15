@@ -9,19 +9,24 @@ function oppgave1() {
 //oppgave 2
 
 function visArray(){
-    const kurs= {
+    const valuta= {
         navn: $("#valutaNavn").val(),
         kurs: $("#kurs").val(),
     };
-    $.get("/src/main/resources/static/index.html/utVal", function (data){
+    $.get("/utVal", valuta, function (data){
         $("#visVal").html(data);
     })
 }
 
+
 function oppgave2() {
-    const url="/src/main/resources/static/index2.html/?=" + $("#Uvaluta")
-    const kurs= {
+
+    const valuta= {
         navn: $("#valutaNavn").val(),
         kurs: $("#kurs").val(),
     };
+    $.get("/StringSum",valuta,function (data){
+        $("#iNok").html(data);
+    })
+
 }

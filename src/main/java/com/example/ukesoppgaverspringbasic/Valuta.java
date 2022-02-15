@@ -2,12 +2,12 @@ package com.example.ukesoppgaverspringbasic;
 
 //oppgave 2
 public class Valuta {
-    private String navn;
+    private String valutaNavn;
     private double kurs = 0.00;
 
-    public Valuta(String navn, double kurs) {
-        navn = this.navn;
-        kurs = this.kurs;
+    public Valuta(String valutaNavn, double kurs) {
+        this.valutaNavn = valutaNavn;
+        this.kurs = kurs;
     }
 
     public Valuta() {
@@ -21,16 +21,17 @@ public class Valuta {
         this.kurs = kurs;
     }
 
-    public String getNavn() {
-        return navn;
+    public String getValutaNavn() {
+        return valutaNavn;
     }
 
     public void setNavn(String navn) {
-        this.navn = navn;
+        this.valutaNavn = navn;
     }
 
     @Override
     public String toString() {
-        return navn +" "+ kurs;
-    };
+        return valutaNavn + " " + kurs;
+
+    }
 }

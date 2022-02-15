@@ -1,5 +1,6 @@
 package com.example.ukesoppgaverspringbasic;
 
+import org.springframework.core.KotlinReflectionParameterNameDiscoverer;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,33 +11,46 @@ public class UkesoppgaverSpringBasicController {
 
     @GetMapping("/src/main/resources/static/index.html")
     //oppgave1
-    public String returTemp(String strengInn){
-        int innmnd= Integer.parseInt(strengInn);
-        Temp Snitt=new Temp();
+    public String returTemp(String strengInn) {
+        int innmnd = Integer.parseInt(strengInn);
+        Temp Snitt = new Temp();
         return Snitt.maaneder(innmnd);
     }
 
     //oppgave2
-    @GetMapping("/src/main/resources/static/index.html/utVal")
-    public String VisArray(String utVal) {
-        ArrayList<Valuta> Kurser = new ArrayList<>();
-        Valuta EUR = new Valuta("Euro", 10.30);
-        Valuta USD = new Valuta("Amerikansk Dollar", 8.30);
-        Kurser.add(EUR);
-        Kurser.add(USD);
+    private ArrayList<Valuta> Kurser = new ArrayList<>();
+    private Valuta EUR = new Valuta("Euro", 10.30);
+    private Valuta USD = new Valuta("Amerikansk Dollar", 8.30);
 
+    @GetMapping("/utVal")
+    public String VisArray() {
+        String utVal = "";
+        Kurser.add(USD);
+        Kurser.add(EUR);
         for (Valuta penger : Kurser) {
-          utVal= penger.getNavn() + " " + penger.getKurs() +"\n";
+            utVal += penger.getValutaNavn() + " " + penger.getKurs() + "<br>";
+            System.out.println(penger);
         }
         return utVal;
     }
 
-    @GetMapping("/src/main/resources/static/index2.html")
-    public String returValuta(String innSum) {
-        double sumutregn = Double.parseDouble(innSum);
-        double nykurs = sumutregn;
+    @GetMapping("/StringSum")
+    public String returValuta() {
+        //Strenger
+        String innkurs = "";
+        String innNavn = "";
+        String innVerdi = "";
+        String StringSum;
+        //desimaler
+        double sum = 0;
+        double kurs = Double.parseDouble(innkurs);
+        double verdi = Double.parseDouble(innVerdi);
+        Valuta nykurs = new Valuta(innNavn, kurs);
+        Kurser.add(nykurs);
 
-        return "Det blir " + nykurs + " i Norske kroner ";
+        sum = verdi * nykurs.getKurs();
+        StringSum = nykurs.getValutaNavn() + "blir" + sum + " i NOK blir: ";
+        return StringSum;
     }
 
 }
