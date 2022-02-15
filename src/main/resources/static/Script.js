@@ -25,6 +25,7 @@ function oppgave2() {
         navn: $("#valutaNavn").val(),
         kurs: $("#kurs").val(),
     };
+    const sum=$("#Uvaluta").val();
     $.get("/StringSum",valuta,function (data){
         $("#iNok").html(data);
     })

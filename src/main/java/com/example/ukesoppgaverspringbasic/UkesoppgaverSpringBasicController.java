@@ -43,8 +43,8 @@ public class UkesoppgaverSpringBasicController {
         String StringSum;
         //desimaler
         double sum = 0;
-        double kurs = Double.parseDouble(innkurs);
-        double verdi = Double.parseDouble(innVerdi);
+        double kurs = Integer.parseInt(innkurs);
+        double verdi = Integer.parseInt(innVerdi);
         Valuta nykurs = new Valuta(innNavn, kurs);
         Kurser.add(nykurs);
 
